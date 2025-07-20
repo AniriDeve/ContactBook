@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ContactBook {
+    private List<Contact> contacts;
+
+    public ContactBook() {
+        contacts = new ArrayList<>();
+    }
+
+    // Добавить контакт
+    public void addContact(Contact contact) {
+        contacts.add(contact);
+    }
+
+    // Удалить контакт по имени
+    public boolean deleteContact(String name) {
+        return contacts.removeIf(c -> c.getName().equalsIgnoreCase(name));
+    }
+
+    // Найти контакт по имени
+    public Contact findContact(String name) {
+        for (Contact c : contacts) {
+            if (c.getName().equalsIgnoreCase(name)) {
+                return c;
+            }
+        }
+        return null;
+    }
+
+    // Показать все контакты
+    public void listContacts() {
+        if (contacts.isEmpty()) {
+            System.out.println("Контактная книга пуста.");
+        } else {
+            for (Contact c : contacts) {
+                System.out.println(c);
+            }
+        }
+    }
+}
