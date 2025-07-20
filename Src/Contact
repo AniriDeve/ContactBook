@@ -1,0 +1,50 @@
+public class Contact {
+    private String name;
+    private String phone;
+    private String email;
+
+    // Конструктор
+    public Contact(String name, String phone, String email) {
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    // Геттеры и сеттеры
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // Переопределение toString для красивого вывода
+    @Override
+    public String toString() {
+        return "Имя: " + name + ", Телефон: " + phone + ", Email: " + email;
+    }
+}
+
+
+Класс Contact содержит поля: имя, телефон, email.
+
+Геттеры и сеттеры позволяют читать и изменять данные.
+
+toString() — для вывода объекта в читабельном виде.
